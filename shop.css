@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navigation */
+.navigation{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/image/bg1.png);
+    background-size: cover;
+    background-position: center;
+}
+.navigation nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 1px 2px 8px #333;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+.navigation nav .btn-menu li{
+    display: inline-block;
+    margin: 5px 15px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.navigation nav .btn-menu li a:hover{
+    color: #c72092;
+}
+.navigation nav .btn-menu li a{
+    text-decoration: none;
+}
+.navigation nav .logo{
+    font-size: 2rem;
+    color:#c72092;
+    margin: 5px 0;
+    cursor: pointer;
+    position: relative;
+    left: -5%;
+}
+.navigation nav .logo span{
+    color:  #6c14d0;
+    text-decoration: underline;
+}
+/* btn-contact */
+.navigation .btn-contact button a{
+    text-decoration: none;
+    color: white
+}
+
+.navigation .btn-contact button {
+    font-size: 1rem;
+    padding:10px 1.2rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+    background:linear-gradient(to right ,#c72092,#6c14d0);
+    border-radius: 5px;
+    border: none;
+}
+.navigation .btn-contact button:hover{
+    background: linear-gradient(to left ,#c72092a6,#6c14d0b0);
+}
+/* humberger button */
+.humberger-btn i{
+    font-size: 1.9rem;
+}
+.humberger-btn{
+    display: none;
+}
+/* drop down menu */
+.navigation .drop-down-menu {
+    display: none;
+    width: 30%;
+    height: 100vh;
+    background: linear-gradient(to left ,#c72092a6,#6c14d0b0);
+    box-shadow: 1px 0px 5px #333;
+    text-align: center;
+    position: fixed;
+    margin-top: 2rem;
+    z-index: 1;
+
+}
+
+
+.navigation .drop-down-menu.show {
+    display: block;
+}
+
+.navigation .drop-down-menu .btn-menu li {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    cursor: pointer;
+   
+}
+
+.navigation .drop-down-menu .btn-menu li a:hover {
+    color: #c72092;
+}
+
+.navigation .drop-down-menu .btn-menu li:hover {
+    background-color: rgba(247, 238, 227, 0.807);
+}
+
+.navigation .drop-down-menu .btn-menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* btn-contact drop-down */
+.navigation .drop-down-menu .btn-contact button a {
+    text-decoration: none;
+    color: white
+}
+
+.navigation .drop-down-menu .btn-contact button {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    padding: 10px 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #c72092, #6c14d0);
+    border-radius: 5px;
+}
+
+.navigation .drop-down-menu .btn-contact button:hover {
+    background: linear-gradient(to left, #c72092a6, #6c14d0b0);
+}
+
+/* reponsive navigation */
+@media only screen and (max-width: 768px){
+    .navigation nav .btn-menu{
+        display: none;
+    }
+    .navigation .btn-contact .btn-tel{
+        display: none;
+    }
+    .humberger-btn{
+        display: block;
+        position: relative;
+        right: -10px;
+    }
+    .navigation .drop-down-menu{
+        /* display: block;  */
+    }
+    .navigation nav .logo{
+        font-size: 1.5rem;
+    }
+    
+    
+}
+/* content */
+.navigation .main-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.navigation .main-container .main-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.navigation .main-container .main-content .content h1{
+    font-size: 80px;
+    line-height: 70px;
+    font-family: pyxidium quick;
+    background: linear-gradient(to right ,#c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 45px;
+    left: 4%;
+}
+.navigation .main-container .main-content .content h1 span{
+    font-size: 60px;
+    background: linear-gradient(to right ,#c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.navigation .main-container .main-content .content p{
+    width: 600px;
+    text-align: justify;
+    line-height: 21px;
+    position: relative;
+    top: 85px;
+    left: 5%;
+}
+.navigation .main-container .main-content .main-img img{
+    width: 650px;
+    position: relative;
+    top: 95px;
+}
+.social-icon{
+    display: flex;
+    flex-direction: column;
+}
+.navigation .main-container .social-icon{
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    transform: translate(-50%,-50%);
+    font-size: 19px;
+}
+.navigation .main-container .social-icon i{
+    margin: 10px 0;
+    transition: 0.3s;
+}
+.navigation .main-container .social-icon i:hover{
+    color: #c72092;
+}
+.navigation .main-container .button{
+    position: absolute;
+    left: 10%;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background:linear-gradient(to right ,#c72092,#6c14d0) ;
+    
+}
+.button a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.navigation .main-container .button:hover{
+    background: linear-gradient(to left ,#c72092a6,#6c14d0b0);
+}
+/* responsive container */
+@media only screen and (max-width: 768px) {
+    .navigation .main-container {
+        width: 95%;
+    }
+
+    .navigation .main-container .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation .main-container .main-content .content h1 {
+        font-size: 3rem;
+        text-align: center;
+        position: relative;
+        top: 5rem;
+    }
+
+    .navigation .main-container .main-content .content p {
+        position: static;
+        width: auto;
+        text-align: center;
+        margin-top: 10rem;
+    }
+
+    .navigation .main-container .main-content .main-img {
+        height: auto;
+        max-width: 30rem;
+        position: static;
+        top: auto;
+        left: auto;
+    }
+    .navigation .main-container .main-content .main-img img{
+        width: 100%;
+    }
+    
+    .navigation .main-container .button{
+        position: absolute;
+        margin-top: 8rem;
+        left: 16rem;
+    }
+    .navigation .main-container .social-icon{
+        display: none;
+    }
+    
+}
